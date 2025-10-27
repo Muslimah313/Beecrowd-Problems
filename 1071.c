@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y, sum = 0;
+    scanf("%d", &X);
+    scanf("%d", &Y);
+
+
+    if (X < Y) {
+        int temp = X;
+        X = Y;
+        Y = temp;
+    }
+
+    for (int i = Y + 1; i < X; i++) {
+        if (i % 2 != 0) {
+            sum += i;
+        }
+    }
+
+    printf("%d\n", sum);
+
+    return 0;
+}
+
